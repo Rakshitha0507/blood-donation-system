@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --bg-dark: #0f0f13;
+  --bg-card: rgba(30, 30, 35, 0.4);
+  --border-light: rgba(255, 255, 255, 0.08);
+  --accent-primary: #ff0844;
+  --accent-secondary: #ffb199;
+  --accent-gradient: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  --font-family: 'Outfit', sans-serif;
+  
+  --shadow-glow: 0 0 20px rgba(255, 8, 68, 0.5);
+  --shadow-card: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--bg-dark);
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(255, 8, 68, 0.12), transparent 45%),
+    radial-gradient(circle at 85% 30%, rgba(255, 177, 153, 0.08), transparent 45%);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Global scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark); 
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2); 
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3); 
+}
