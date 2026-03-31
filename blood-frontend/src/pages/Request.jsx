@@ -17,7 +17,7 @@ function Request() {
       return;
     }
 
-    fetch("http://localhost:8081/request/create", {
+    fetch("https://awake-appreciation-production.up.railway.app/request/create", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

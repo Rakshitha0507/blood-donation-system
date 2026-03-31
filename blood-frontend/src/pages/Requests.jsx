@@ -4,7 +4,7 @@ function Requests() {
   const [requests, setRequests] = useState([]);
 
   const fetchRequests = () => {
-    fetch("http://localhost:8081/request/all")
+    fetch("https://awake-appreciation-production.up.railway.app/request/all")
       .then(res => res.json())
       .then(data => setRequests(data))
       .catch(() => alert("Error fetching requests"));
@@ -16,7 +16,7 @@ function Requests() {
 
   // 🔥 Update Status
   const updateStatus = (id, status) => {
-    fetch(`http://localhost:8081/request/update-status/${id}?status=${status}`, {
+    fetch(`https://awake-appreciation-production.up.railway.app/request/update-status/${id}?status=${status}`, {
       method: "PUT"
     })
       .then(res => res.json())

@@ -6,7 +6,7 @@ function DonorSearch() {
   const [donors, setDonors] = useState([]);
 
   const search = () => {
-    fetch(`http://localhost:8081/donor/search?bloodGroup=${encodeURIComponent(bloodGroup)}&location=${encodeURIComponent(location)}`)
+    fetch(`https://awake-appreciation-production.up.railway.app/donor/search?bloodGroup=${encodeURIComponent(bloodGroup)}&location=${encodeURIComponent(location)}`)
       .then(res => {
         if (!res.ok) throw new Error(`Backend Error ${res.status}`);
         return res.json();
@@ -28,7 +28,7 @@ function DonorSearch() {
       status: "PENDING"
     };
 
-    fetch("http://localhost:8081/request/create", {
+    fetch("https://awake-appreciation-production.up.railway.app/request/create", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -9,7 +9,7 @@ function Register() {
   };
 
   const handleSubmit = () => {
-    fetch("http://localhost:8081/donor/register", {
+    fetch("https://awake-appreciation-production.up.railway.app/donor/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
